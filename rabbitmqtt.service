@@ -1,0 +1,16 @@
+[Unit]
+Description=Autostart for RabbitMQ MQTT docker container
+After=docker.service
+Requires=docker.service
+
+[Service]
+User=pi
+TimeoutStartSec=0
+Restart=always
+RemainAfterExit=true
+ExecStart=/usr/bin/docker start rabbitmqtt-server
+ExecStop=/usr/bin/docker stop -t 2 rabbitmqtt-server
+
+[Install]
+WantedBy=default.target
+
