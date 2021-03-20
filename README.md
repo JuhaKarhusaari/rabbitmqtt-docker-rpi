@@ -39,3 +39,8 @@ docker ps
 sudo reboot
 ```
 - After boot you can run service & container checks to be sure everything is ok.
+
+## Container ports:
+ 1883  - MQTT
+ 15672 - RabbitMQ Management (Web) Default user: guest / guest
+ 15675 - Web MQTT 
